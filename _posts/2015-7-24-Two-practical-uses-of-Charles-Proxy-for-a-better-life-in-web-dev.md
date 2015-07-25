@@ -36,7 +36,7 @@ If you want to do this, you literally download Charles, select 'Proxy -> Breakpo
 If you are building out Ajax error handling (specifically for bad requests), you should immediately be able to see the value of this.  
 <br/><br/>
 
-[_config.yml]({{ site.baseurl }}/images/charles1.png)
+<img src="{{ site.baseurl }}/images/charles1.png" />
 
 <b>2) Proxy Mapping folders (folders full of assets!):</b>
 Charles' proxy map feature allows you to do just that. Take a request that originates from (a), and point it to (b). There are a million reasons why you may want to do this, but for me (depending on the project) I've found it useful to map assets. Depending on the asset manager in question, often times 'the thing' you are using for application asset management, may be moving source code from one location to another. Think of all of the stuff that can go into a legacy environment, vagrant, PLUS a weird build process, AND a bunch of other crap...and you may find that compiling source code after saving is not as easy as it should be. 
@@ -48,7 +48,7 @@ If the condition is met that the thing in place a) is going to be (at it's resti
 The positive consequence of this is that your application can find the assets it is looking for, uninterrupted, and in tact. Depending on your particular needs, this can actually prevent you from running a build process, and therefore save you time. 
 <br/><br/>
 
-[_config.yml]({{ site.baseurl }}/images/charles2.png)
+<img src="{{ site.baseurl }}/images/charles2.png" />
 
 
 <b>My One Complaint:</b> <br/>
