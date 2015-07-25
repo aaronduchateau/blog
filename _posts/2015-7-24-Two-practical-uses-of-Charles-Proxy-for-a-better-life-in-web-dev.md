@@ -3,13 +3,13 @@ layout: post
 title: Two practical uses of Charles (proxy), for a better life in web dev.
 ---
 
-<b>The two Stupid Problems: Building and Testing Server Response Error Handling Client Side, and cutting down your build process (in a legacy code base)</b>
+<b>The two Stupid Problems: Testing timeouts (and other server side responses) to create error handling after Ajax calls, and cutting down your build process (in a legacy code base)</b>
 <br/><br/>
 
-<b>Problem 1)</b> One of the more tedious issues to deal with in software / web development, is building out your server response error handling, and serving it up client side (i.e. Ajax requests). While there is nothing fundamentally complex about this task, it always seems to take a minute to figure out how to test your server's error states <i>quickly</i>. The good news is Charles can help with this. 
+<b>Problem 1)</b> One of the more 'not fun' issues to deal with in software / web development, is building out your error handling. In this case, when i refer to error handling, i mean response / request error handling (not talking about validating inputs here). If you are working in a single page application, you are most likely building this out as a result of an ajax call. While there is nothing fundamentally complex about this task, messing around server side to deal with what <i>is</i> a responsibility of the client, isn't always fast or fun, either. The good news is Charles can help with this. 
 <br/><br/>
 
-<b>Problem 2)</b> With the advent of webpack and other modern module bundlers, compiling source code now takes less time than it used to, however when working on a legacy project, sometimes that is simply out of your control. If you have been a developer over the last x years, I guarantee you have spent some amount of time 'kicking it for 30 seconds - X minutes, with a furrowed brow', just to see your changes. While an <i>ideal</i> environment would provide for instanteous compile/preview, sometimes you are working in an environment where the resources to see your changes quickly aren't available. 
+<b>Problem 2)</b> With the advent of webpack and other modern module bundlers, compiling source code now takes less time than it used to, however when working on a legacy project, sometimes that is simply out of your control. If you have been a developer over the last x years, I guarantee you have spent some amount of time 'kicking it' for 30 seconds - X minutes, with a furrowed brow, just to see your changes. While an <i>ideal</i> environment would provide for instanteous compile/preview, sometimes you are working in an environment where the resources to see your changes quickly aren't available. 
 <br/><br/>
 
 In short what I'm saying is the right answer to this problem, is really to choose bundlers and languages (webpack / node) that don't make this an issue in the first place. When that isn't an option (politics or legacy code), you still have to wait, and it sucks. Charles can help with this also.
@@ -36,7 +36,7 @@ If you want to do this, you literally download Charles, select 'Proxy -> Breakpo
 If you are building out Ajax error handling (specifically for bad requests), you should immediately be able to see the value of this.  
 <br/><br/>
 
-<b>2) Proxy Mapping folders, full of assets:</b>
+<b>2) Proxy Mapping folders (folders full of assets!):</b>
 Charles' proxy map feature allows you to do just that. Take a request that originates from (a), and point it to (b). There are a million reasons why you may want to do this, but for me (depending on the project) I've found it useful to map assets. Depending on the asset manager in question, often times 'the thing' you are using for application asset management, may be moving source code from one location to another. Think of all of the stuff that can go into a legacy environment, vagrant, PLUS a weird build process, AND a bunch of other crap...and you may find that compiling source code after saving is not as easy as it should be. 
 <br/><br/>
 
@@ -54,4 +54,8 @@ My one complaint is that the software (as of the time of writing) does not allow
 i.e. given http://mydevenvironment.app/pictures-of-cows-or-whatever/123 -> http://mydevenvironment.app/simulate-500, you would have to build out the simulate-500 route, just for testing. Yuck. 
 <br/><br/>
 
-This of course would require you to build out an endpoint, and it seems silly that this is not a 'given' in terms of required features sets for Charles. Get it together Charles :)
+This of course would require you to build out an endpoint, and it seems silly that this is not a 'given' in terms of required features sets for Charles. 
+<br/><br/>
+
+Regardless it's good for timeouts, or if you do have error endpoints built out it makes it really easy to toggle between them with the click of a button as you modify your codebase. Charles, I mostly like it :)
+<br/><br/>
