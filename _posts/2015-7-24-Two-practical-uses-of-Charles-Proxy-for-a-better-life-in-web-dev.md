@@ -3,7 +3,7 @@ layout: post
 title: Two practical uses of Charles (proxy), for a better life in web dev.
 ---
 
-<b>The two Stupid Problems: Testing timeouts (and other server side responses) to create error handling after Ajax calls, and cutting down your build process (in a legacy code base)</b>
+<b>The two stupid problems: Testing timeouts (and other server side responses) to create error handling after Ajax calls, and cutting down your build process (in a legacy code base)</b>
 <br/><br/>
 
 <b>Problem 1)</b> One of the more 'not fun' issues to deal with in software / web development, is building out your error handling. In this case, when i refer to error handling, i mean response / request error handling (not talking about validating inputs here). If you are working in a single page application, you are most likely building this out as a result of an ajax call. While there is nothing fundamentally complex about this task, messing around server side to deal with what <i>is</i> a responsibility of the client, isn't always fast or fun, either. The good news is Charles can help with this. 
