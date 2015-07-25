@@ -59,5 +59,5 @@ i.e. given http://mydevenvironment.app/pictures-of-cows-or-whatever/123 -> http:
 This of course would require you to build out an endpoint, and it seems silly that this is not a 'given' in terms of required features sets for Charles. 
 <br/><br/>
 
-Regardless it's good for timeouts, or if you do have error endpoints built out it makes it really easy to toggle between them with the click of a button as you modify your codebase. Charles, I mostly like it :)
+Regardless it's good for timeouts, or if you do have endpoints (for specific errors), it makes it faster to hit them. Charles, I mostly like it :)
 <br/><br/>
